@@ -1,3 +1,163 @@
+/* Signup Page Section Styles */
+.signup-section {
+  background: #fff;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 16px;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.08),
+    0 1.5px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 95%;
+}
+.signup-section h1 {
+  color: #e63946;
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+  font-weight: bold;
+  line-height: 1.15;
+}
+.signup-section p {
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+.signup-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.signup-form button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.signup-form button:hover {
+  background: #b71c1c;
+}
+
+@media (max-width: 700px) {
+  .signup-section {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    margin: 1.2rem auto;
+    font-size: 0.98rem;
+  }
+  .signup-section h1 {
+    font-size: 1.3rem;
+  }
+  .signup-form input {
+    font-size: 0.98rem;
+  }
+  .signup-form button {
+    font-size: 0.98rem;
+  }
+}
+/* Contact Page Section Styles */
+.contact-page-section {
+  background: #fff;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 16px;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.08),
+    0 1.5px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 95%;
+}
+.contact-page-section h1 {
+  color: #e63946;
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+  font-weight: bold;
+  line-height: 1.15;
+}
+.contact-page-section p {
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+.contact-form textarea {
+  min-height: 100px;
+}
+.contact-form button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #b71c1c;
+}
+.contact-social {
+  margin-top: 1.2rem;
+}
+.contact-social a {
+  color: #e63946;
+  margin: 0 12px;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+.contact-social a:hover {
+  color: #457b9d;
+}
+
+@media (max-width: 700px) {
+  .contact-page-section {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    margin: 1.2rem auto;
+    font-size: 0.98rem;
+  }
+  .contact-page-section h1 {
+    font-size: 1.3rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.98rem;
+  }
+  .contact-form button {
+    font-size: 0.98rem;
+  }
+}
 /* About Section Styles */
 .about-section {
   background: #fff;
@@ -5,7 +165,8 @@
   padding: 2.5rem 1.5rem 2rem 1.5rem;
   border-radius: 16px;
   max-width: 850px;
-  box-shadow: 0 4px 24px rgba(230,57,70,0.08), 0 1.5px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 24px rgba(230, 57, 70, 0.08),
+    0 1.5px 8px rgba(0, 0, 0, 0.06);
   text-align: center;
   position: relative;
   z-index: 1;
@@ -45,7 +206,7 @@
   min-width: 110px;
   font-size: 1.05rem;
   color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -57,7 +218,7 @@
   font-size: 1.2rem;
 }
 .about-section ul li:hover {
-  box-shadow: 0 6px 18px rgba(230,57,70,0.13);
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.13);
   transform: translateY(-4px) scale(1.04);
 }
 
@@ -93,12 +254,44 @@
 .navbar {
   width: 100%;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 .navbar-container {
+  position: relative;
+  .navbar-hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #e63946;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 200;
+  }
+
+  @media (max-width: 700px) {
+    .navbar-hamburger {
+      display: block;
+    }
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+      background: #fff;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 0 0 12px 12px;
+      padding-bottom: 10px;
+    }
+    .navbar-links.open {
+      display: flex;
+    }
+  }
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -151,12 +344,11 @@
   color: #fff;
 }
 
-@media(max-width: 900px) {
-    .navbar-links {
-        gap: 16px;
-        font-size: 0.75rem;
-
-    }
+@media (max-width: 900px) {
+  .navbar-links {
+    gap: 16px;
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 700px) {
   .navbar-container {
@@ -170,7 +362,6 @@
     gap: 10px;
     width: 100%;
     margin-top: 10px;
-   
   }
   .navbar-links a {
     width: 100%;
@@ -198,10 +389,10 @@ a {
 /* Hero Section */
 .hero {
   background: url(/images/donation2.jpg) no-repeat;
- background-size: cover;
- background-position: center;
- min-height: 100vh;/* ensures it fills the full viewport height */
- /* object-fit: cover; */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* ensures it fills the full viewport height */
+  /* object-fit: cover; */
   color: #fff;
   padding: 60px 20px 40px 20px;
   text-align: center;
@@ -257,7 +448,7 @@ a {
 .contact:hover,
 .stats:hover,
 .gallery:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
   transform: translateY(-6px) scale(1.03);
   transition: box-shadow 0.3s, transform 0.3s;
 }
