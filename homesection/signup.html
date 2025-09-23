@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Blood Donation Project</title>
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="login.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -27,16 +29,77 @@
         </div>
     </nav>
     <section class="signup-section">
-        <h1>Sign Up to Become a Donor</h1>
-        <p>Join our community of lifesavers! Fill in your details below to register as a blood donor.</p>
-        <form class="signup-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="text" placeholder="Blood Group (e.g. O+, A-)" required>
-            <input type="text" placeholder="Location/City" required>
-            <button type="submit">Sign Up</button>
+        <form id="account-form" class="signup-form" action="login.html">
+            <h1>Sign Up to Become a Donor</h1>
+            <p>Join our community of lifesavers! Fill in your details below to register as a blood donor.</p>
+
+            <!-- create account -->
+            <!-- NAME -->
+            <div class="input-group">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" placeholder="UserName">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Error Message</p>
+            </div>
+            <!-- EMAIL -->
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Error Message</p>
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254 700000000">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Error Message</p>
+            </div>
+
+            <!-- blood group -->
+            <div class="input-group">
+                <label for="blood">Blood Group</label>
+                <input type="text" placeholder="Blood Group (e.g. O+, A-)" id="blood" name="blood">
+                <p></p>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="input-group">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Error Message</p>
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="input-group">
+                <label for="username">Password</label>
+                <input type="password" id="confirm-password" name="password" placeholder="Confirm password">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <p>Error Message</p>
+            </div>
+
+            <button type="submit" class="btn">
+                <a href="success sign up.html"> Sign Up</a>
+            </button>
+
+
+            <div class="signup-link">
+
+                <p>Don't have an account? <a href="login.html">Sign in</a></p>
+
+            </div>
+            <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
+            <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
         </form>
+
     </section>
     <footer>
         <div class="social-links">

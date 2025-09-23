@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+    <header>
+        <!-- nav section -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-icons-logo">
+                    <a href="#" class="navbar-logo">
+                        <i class="fa fa-tint" aria-hidden="true"></i>
+                        BloodDonate
+                    </a>
+                    <div class="navbar-hambager">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="navbar-close">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+
+                <div class="nav-profile">
+                    <div class="profile">
+                        <img src="/images/user1.jpg" width="40px" alt="Profile Picture" class="profile-pic">
+                        <span class="profile-name">Jane Doe</span>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Menu <i class="fas fa-caret-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="#">Log Out</a>
+                            <a href="/donors porata/profile/index.html">Update Profile</a>
+                            <a href="#">Other Option</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- left side bar -->
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fa fa-braille"></i> Dashboard</a></li>
+            <li><a href="/homesection/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#"><i class="fas fa-history"></i> Donation History</a></li>
+            <li><a href="#"><i class="fas fa-calendar-check"></i> Schedule Donation</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#"><i class="fa fa-medkit"></i> Health Tips</a></li>
+            <li><a><i class="fa fa-certificate" aria-hidden="true"></i> donation certificate</a></li>
+        </ul>
+    </aside>
+    <!-- main section -->
+    <main class="main-content">
+        <h1>Welcome back Jane Doe</h1>
+        <p>Here you can manage your donations, update your profile, and stay informed about upcoming events.</p>
+        <!-- Add more content as needed -->
+        <section class="stats">
+            <div class="stat-card">
+                <h2>Total Donations</h2>
+                <p>5</p>
+            </div>
+            <div class="stat-card">
+                <h2>Next Donation Date</h2>
+                <i class="fa fa-calendar-check-o"></i>
+                <p>2024-07-15</p>
+            </div>
+            <div class="stat-card">
+                <h2>Messages</h2>
+                <p>2 New</p>
+            </div>
+        </section>
+        <section class="recent-activities">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>Donated blood on 2024-05-10</li>
+                <li>Scheduled next donation for 2024-07-15</li>
+                <li>Updated profile information</li>
+            </ul>
+    </main>
+
+    <!-- footer -->
+    <script src="portal.js"></script>
+</body>
+
+</html>
