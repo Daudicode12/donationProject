@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Blood Donation Project</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/donationProject/public/homesection/style.css">
     <!-- <link rel="stylesheet" href="login.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -19,12 +19,12 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="navbar-links" id="navbar-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#donate">Donate</a></li>
-                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="/donationProject/public/homesection/index.html">Home</a></li>
+                <li><a href="/donationProject/public/homesection/about.html">About</a></li>
+                <li><a href="/donationProject/public/homesection/index.html#donate">Donate</a></li>
+                <li><a href="/donationProject/public/homesection/index.html#gallery">Gallery</a></li>
                 <li><a href="#" class="active">Sign Up</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/donationProject/public/homesection/contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -87,13 +87,15 @@
             </div>
 
             <button type="submit" class="btn">
-                <a href="success sign up.html"> Sign Up</a>
+                <a href="#"> Sign Up</a>
             </button>
 
+            <!-- Message container -->
+            <div id="message-container" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center;"></div>
 
             <div class="signup-link">
 
-                <p>Don't have an account? <a href="login.html">Sign in</a></p>
+                <p>Have an account? <a href="/donationProject/public/homesection/auth/login/login.html">Sign in</a></p>
 
             </div>
             <!-- <i class="fa fa-check-circle" aria-hidden="true"></i> -->
@@ -109,8 +111,8 @@
         </div>
         <p>&copy; 2025 Blood Donation Project. All rights reserved.</p>
     </footer>
-    <script src="about.js"></script>
-    <script src="signup.js"></script>
+    <script src="/donationProject/public/homesection/about.js"></script>
+    <script src="/donationProject/public/homesection/auth/signup/signup.js"></script>
 </body>
 
 </html>

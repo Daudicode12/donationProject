@@ -323,7 +323,7 @@ a {
 
 /* Hero Section */
 .hero {
-  background: url(/images/donation2.jpg) no-repeat;
+  background: url(/donationProject/public/images/donation2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh; /* ensures it fills the full viewport height */

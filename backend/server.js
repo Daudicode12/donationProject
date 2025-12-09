@@ -2,7 +2,7 @@ const express = require ('express');
 const dotenv = require ('dotenv');
 const bodyParser = require ('body-parser');
 const cors = require ('cors');
-const authRoutes = require ('../routes/authRoute');
+const authRoutes = require ('./routes/auth');
 
 // load environment variable from .env file
 dotenv.config();
@@ -12,7 +12,7 @@ const port = process.env.PORT;
 app.use (cors());
 app.use (bodyParser.json());
 app.use (bodyParser.urlencoded ({ extended: true }));
-app.use('/user', authRoutes);
+app.use('/api/auth', authRoutes);
 
 
 

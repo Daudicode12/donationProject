@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/images/donate3.jpg)
+  background: url(/donationProject/public/images/donate3.jpg)
     no-repeat center/cover;
   position: relative;
 }
@@ -101,7 +101,15 @@ body::before {
 .options a:hover {
   text-decoration: underline;
 }
-
+.check{
+  justify-content: space-between;
+  max-width: fit-content;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
 .social-login {
   margin: 20px 0;
 }
