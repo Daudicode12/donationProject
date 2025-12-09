@@ -46,10 +46,10 @@ formEl.addEventListener('submit', async (e) => {
      showMessage('Account created successfully.', true);
      // Optional: Clear form after successful signup
      formEl.reset();
-     // Optional: redirect to login page after 2 seconds
-     // setTimeout(() => {
-     //   window.location.href = '../login/login.html';
-     // }, 2000);
+     //  redirect to login page after 2 seconds
+     setTimeout(() => {
+       window.location.href = '../login/login.html';
+     }, 2000);
    } else {
      showMessage(result.message || 'Signup failed. Please try again.', false);
    }
