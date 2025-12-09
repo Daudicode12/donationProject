@@ -15,33 +15,34 @@ const port = process.env.PORT;
 app.use (cors());
 app.use (bodyParser.json());
 app.use (bodyParser.urlencoded ({ extended: true }));
-app.use('/api/auth', authRoutes);
-app.use(express.static('public/homesection'));
 
-app.use('/', (req, res)=>{
+// Serve static files from public directory
+app.use(express.static(path.join(__dirname, '../public')));
+
+// API routes
+app.use('/api/auth', authRoutes);
+
+// HTML page routes
+app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, '../public/homesection/index.html'));
 });
 
-// homesection routes
-app.use(('/about'), (req, res)=>{
+app.get('/about', (req, res)=>{
     res.sendFile(path.join(__dirname, '../public/homesection/about.html'));
-})
-app.use(('/donate'), (req, res)=>{
-    res.sendFile(path.join(__dirname, '../public/homesection/about.html#donate'));   
 });
 
-app.use(('/contact'), (req, res)=>{
+app.get('/contact', (req, res)=>{
     res.sendFile(path.join(__dirname, '../public/homesection/contact.html'));   
 });
-app.use(('/signup'), (req, res)=>{
+
+app.get('/signup', (req, res)=>{
     res.sendFile(path.join(__dirname, '../public/homesection/auth/signup/signup.html'));   
 });
-app.use(('/gallery'), (req, res)=>{
-    res.sendFile(path.join(__dirname, '../public/homesection/gallery.html'));
+
+app.get('/login', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../public/homesection/auth/login/login.html'));   
 });
-app.use(('/login'), (req, res)=>{
-    res.sendFile(path.join(__dirname, '../public/homesection/login.html'));   
-});
+
 app.listen(port, ()=>{
     console.log(`Server is running on port http://localhost:${port}`);
     
