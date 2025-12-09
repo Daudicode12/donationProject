@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/donationProject/public/images/donate3.jpg)
+  background: url(/images/donate3.jpg)
     no-repeat center/cover;
   position: relative;
 }
