@@ -4,7 +4,19 @@ const bodyParser = require ('body-parser');
 const cors = require ('cors');
 const authRoutes = require ('./routes/auth');
 const path = require('path');
+const rateLimit = require ("express-rate-limit");
+const { error } = require('console');
 
+const authLimiter = rateLimit ({
+    windowMs: 15 * 60 * 1000, //15 minutes
+    max: 5, // limit each IP to 5 requests per windowMs
+    keyGenerator: (req)=> {
+        return req.user ? req.user.id : req.ip
+    },
+    message: {
+        error: "Too many requests from this IP, please try again after 15 minutes"
+    }
+})
 
 // load environment variable from .env file
 dotenv.config();
@@ -20,7 +32,7 @@ app.use (bodyParser.urlencoded ({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // API routes
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', authLimiter, authRoutes);
 
 // HTML page routes
 app.get('/', (req, res)=>{

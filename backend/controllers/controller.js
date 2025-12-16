@@ -1,6 +1,8 @@
 // importing database connection
 const connection = require('../config/db');
 const bcrypt = require('bcrypt');
+const { json } = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 const signupController = (req, res) => {
     const { username, email, phone, password, bloodGroup} = req.body;
@@ -80,8 +82,15 @@ const loginController = (req, res) => {
                 message: 'Invalid credentials'
             });
         }
+
+        const token = jwt.sign({
+            id: user.id,
+            email: user.email,}, process.env.JWT_SECRET, {
+                expiresIn: 1000 * 60 * 60 * 24 // 24 hours
+            })
          return res.status(200).json({
-            message: 'Login successful'
+            message: 'Login successful',
+            token: token
          });
     });
 
