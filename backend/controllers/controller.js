@@ -65,7 +65,7 @@ const loginController = (req, res) => {
     connection.query(getUserQuery, [email], async (err, result) => {
         if (err) {
             return res.status(500).json({
-                message: 'Database error',
+                message: 'An error occured please try again later',
                 error: err
             });
         }
