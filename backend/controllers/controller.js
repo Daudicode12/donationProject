@@ -53,47 +53,47 @@ const signupController = (req, res) => {
 
 };
 
-//login controller
-const loginController = (req, res) => {
-    const { email, password } = req.body;
-    if (!email || !password) {
-        return res.status(400).json({ message: 'All fields are required' });
-    }
+// //login controller
+// const loginController = (req, res) => {
+//     const { email, password } = req.body;
+//     if (!email || !password) {
+//         return res.status(400).json({ message: 'All fields are required' });
+//     }
 
-    // checking if user exists comparing passwords
-    const getUserQuery = 'SELECT  * FROM donation WHERE email = ?';
-    connection.query(getUserQuery, [email], async (err, result) => {
-        if (err) {
-            return res.status(500).json({
-                message: 'An error occured please try again later',
-                error: err
-            });
-        }
-        if (result.length === 0) {
-            return res.status(400).json({
-                message: 'User does not exist',
-                error: 'No user found with the provided email'
-            })
-        }
-        const user = result[0];
-        const passwordMatch = await bcrypt.compare(password, user.password);
-        if (!passwordMatch) {
-            return res.status(400).json({
-                message: 'Invalid credentials'
-            });
-        }
+//     // checking if user exists comparing passwords
+//     const getUserQuery = 'SELECT  * FROM donation WHERE email = ?';
+//     connection.query(getUserQuery, [email], async (err, result) => {
+//         if (err) {
+//             return res.status(500).json({
+//                 message: 'An error occured please try again later',
+//                 error: err
+//             });
+//         }
+//         if (result.length === 0) {
+//             return res.status(400).json({
+//                 message: 'User does not exist',
+//                 error: 'No user found with the provided email'
+//             })
+//         }
+//         const user = result[0];
+//         const passwordMatch = await bcrypt.compare(password, user.password);
+//         if (!passwordMatch) {
+//             return res.status(400).json({
+//                 message: 'Invalid credentials'
+//             });
+//         }
 
-        const token = jwt.sign({
-            id: user.id,
-            email: user.email,}, process.env.JWT_SECRET, {
-                expiresIn: 1000 * 60 * 60 * 24 // 24 hours
-            })
-         return res.status(200).json({
-            message: 'Login successful',
-            token: token
-         });
-    });
+//         const token = jwt.sign({
+//             id: user.id,
+//             email: user.email,}, process.env.JWT_SECRET, {
+//                 expiresIn: 1000 * 60 * 60 * 24 // 24 hours
+//             })
+//          return res.status(200).json({
+//             message: 'Login successful',
+//             token: token
+//          });
+//     });
 
-};
+// };
 
-module.exports = { signupController, loginController };
+module.exports = signupController;

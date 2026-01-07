@@ -1,5 +1,6 @@
 const router = require ('express').Router ();
-const { signupController, loginController } = require ('../controllers/controller');
+const signupController = require ('../controllers/controller');
+const loginController = require ('../controllers/loginController');
 // const rateLimit = require ("express-rate-limit");
 
 // //Apply rate limiting to login route
