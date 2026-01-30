@@ -25,7 +25,9 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 app.use (cors());
-app.use (bodyParser.json());
+app.use(express.json()); // to perse incomiing json data
+
+app.use (bodyParser.json()); // this will parse application/json type post data
 app.use (bodyParser.urlencoded ({ extended: true }));
 
 // Serve static files from public directory

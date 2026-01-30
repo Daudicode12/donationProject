@@ -49,5 +49,11 @@ const loginController = (req, res) => {
             token: token
         });
     });
+};
+// ======log out controller===
+const logout = async (req, res)=>{
+    // Invalidate the token on the client side by removing it
+    
+    res.status(200).json({message: 'logout successful'})
 }
-module.exports = loginController;
+module.exports = { loginController, logout };
